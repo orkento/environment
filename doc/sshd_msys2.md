@@ -9,3 +9,59 @@
 ## インストールアプリ
 
 - msys2
+
+
+## 構築手順
+
+1. サーバーマシンにmsys2でopensshをインストール
+2. 以下のコマンドでhost_keyを作成
+
+```
+ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
+ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa
+ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa
+ssh-keygen -f /etc/ssh/ssh_host_ed25519_key -N '' -t ed25519
+```
+
+3. /etc/ssh/sshd_configの設定を以下のように修正(***※事前にバックアップを取ること***)
+
+```
+PasswordAuthentication yes
+HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_dsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+```
+
+4. ```/usr/bin/sshd```と指定して起動し別PCから接続できるか確認
+4. クライアントPCにてssh鍵の生成
+5. クライアント鍵の権限を以下のように変更
+
+```
+chmod 600 id_rsa
+# Windowsのファイルシステムでは権限を以上の通りに変更できないことがあるため以下のようになる
+-rw-r--r-- id_rsa
+```
+
+6. id_rsa.pubをサーバーに転送しサーバーPCに移動
+7. ~/.ssh/authorized_keysにid_rsa.pubの内容を追加
+8. 権限を以下のように変更
+
+```
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+# Windowsのファイルシステムでは権限を以上の通りに変更できないことがあるため以下のようになる
+drwxr-xr-x ~/.ssh/
+-rw-r--r-- ~/.ssh/authorized_keys
+```
+
+9. AuthorizedKeysFileに***絶対パスで***authorized_keysファイルの場所を指定
+10. クライアントから```ssh -vT```で接続を確認
+
+## sshd操作コマンド
+
+TODO
+
+## サービス化
+
+TODO
