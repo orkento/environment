@@ -1,7 +1,7 @@
 # シェル環境構築手順(Windows)
 ## インストールアプリ
 
-- cmdermini
+- cmder(mini)
 - msys2
 - git bash(git for windows?)
 
