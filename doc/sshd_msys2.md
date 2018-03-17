@@ -23,7 +23,7 @@ ssh-keygen -f /etc/ssh/ssh_host_ecdsa_key -N '' -t ecdsa
 ssh-keygen -f /etc/ssh/ssh_host_ed25519_key -N '' -t ed25519
 ```
 
-3. /etc/ssh/sshd_configの設定を以下のように修正(***※事前にバックアップを取ること***)
+3. /etc/ssh/sshd_configの設定を以下のように修正( ***※事前にバックアップを取ること*** )
 
 ```
 PasswordAuthentication yes
@@ -55,7 +55,7 @@ drwxr-xr-x ~/.ssh/
 -rw-r--r-- ~/.ssh/authorized_keys
 ```
 
-9. AuthorizedKeysFileに***絶対パスで***authorized_keysファイルの場所を指定
+9. AuthorizedKeysFileに ***絶対パスで*** authorized_keysファイルの場所を指定
 10. クライアントから```ssh -vT```で接続を確認
 
 ## sshd操作コマンド
