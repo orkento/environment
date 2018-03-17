@@ -26,7 +26,7 @@
 7. msysをデフォルトのタスクにする
 8. .bashrcに/c/ProgramData/chocolatey/binのパスを追加(Emacsアプリ用)
 
-***msys64/usr/bin/をパスに追加するとgit bashの一部のコマンドが利用できなくなる***
+**msys64/usr/bin/をパスに追加するとgit bashの一部のコマンドが利用できなくなる**
 
 ### msysの必須パッケージ
 
@@ -43,7 +43,7 @@
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 ```
 
-***oh-my-fishは古いため非推奨***
+**oh-my-fishは古いため非推奨**
 
 ### 推奨テーマ
 
@@ -51,4 +51,3 @@ cmderにてほとんどのテーマの表示が乱れるため以下を推奨
 
 - フォント...Anonymice Powerline([フォント一覧](https://github.com/powerline/fonts))
 - テーマ...omf/theme-fox
-
