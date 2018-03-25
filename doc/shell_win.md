@@ -53,3 +53,7 @@ cmderにてほとんどのテーマの表示が乱れるため以下を推奨
 
 - フォント...Anonymice Powerline([フォント一覧](https://github.com/powerline/fonts))
 - テーマ...omf/theme-fox
+
+gitリポジトリにてコマンド実行が遅い場合は以下を推奨
+
+- テーマ...omf/theme-gitstatus
