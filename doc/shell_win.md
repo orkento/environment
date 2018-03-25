@@ -5,6 +5,8 @@
 - msys2
 - git bash(git for windows?)
 
+**cmderはfishシェルを使用すると表示が崩れるのでminttyの設定で代替も可能**
+
 ## 構築手順
 
 1. アプリインストール
