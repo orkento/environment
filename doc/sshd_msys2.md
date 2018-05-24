@@ -64,4 +64,10 @@ TODO
 
 ## サービス化
 
-TODO
+### スタートアップへの登録
+
+ショートカットを作成し、リンク先に以下のコマンドを指定して```Windowsキー + R > shell:startup```でスタートアップに登録する
+
+```
+%COMSPEC% /c "C:\msys64\usr\bin\sshd.exe"
+```
