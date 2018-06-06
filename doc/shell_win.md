@@ -20,13 +20,13 @@
   pacman -Su
   ```
 
-4. cmdより```mklink /d```コマンドで以下のシンボリックリンクを作成(.ssh/configが読み出せないため)
+4. cmdより`mklink /d`コマンドで以下のシンボリックリンクを作成(.ssh/configが読み出せないため)
   - シンボル名...msys64\home\ユーザー名
   - リンク先...C:\Users\ユーザー名
 5. cmder.exeをC:\ProgramData\Microsoft\Windows\Start Menu\Programsに登録
 6. cmderを起動しSettingにてインストール済みのBashを読み込ませる
 7. msysをデフォルトのタスクにする
-8. .bashrcに/c/ProgramData/chocolatey/binのパスを追加(Emacsアプリ用)
+8. .bashrcに`chcp.com 65001`と追記してWindowsコマンドをutf-8で扱うよう設定
 
 **msys64/usr/bin/をパスに追加するとgit bashの一部のコマンドが利用できなくなる**
 
