@@ -47,6 +47,13 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fishe
 
 **oh-my-fishは古いため非推奨**
 
+### fisherman必須パッケージ
+
+- z
+- 0rax/fish-bd
+- omf/theme-gitstatus
+- omf/theme-fishface
+
 ### 推奨テーマ
 
 cmderにてほとんどのテーマの表示が乱れるため以下を推奨
